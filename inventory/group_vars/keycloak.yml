@@ -1,0 +1,24 @@
+node_exporter_enabled: true
+access_list:
+  groups: {}
+  singles:
+    - name: gitops.asax.ir
+      ports:
+        - 443
+    - name: repo.asax.ir
+      ports:
+        - 80
+        - 443
+    - name: azure.asax.ir
+      ports:
+        - 80
+        - 443
+    - name: addstage-dc
+      ports:
+        - 389
+    - name: asastage-dc
+      ports:
+        - 389
+    - name: shatelstage-dc
+      ports:
+        - 389

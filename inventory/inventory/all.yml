@@ -1,0 +1,11 @@
+---
+all:
+  children:
+    lb:
+    hap:
+    master:
+    worker:
+    gitlab:
+    keycloak:
+    minio:
+    ansible:

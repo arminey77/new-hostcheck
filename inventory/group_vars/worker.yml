@@ -1,0 +1,65 @@
+nfs_enabled: true
+access_list:
+  groups:
+    - name: master
+      ports:
+        # - 4789/UDP
+        - 6443
+        - 10250
+        - 10257 # kube-controller-manager metrics
+        - 10259 # kube-scheduler metrics
+        - 2381
+        - 9100
+    - name: lb
+      ports:
+        - 8404
+        - 6443
+        - 9100
+        - 9165
+    - name: hap
+      ports:
+        - 8404
+        - 9100
+        - 9165
+    - name: gitlab
+      ports:
+        - 443
+    - name: minio
+      ports:
+        - 32001
+  singles:
+    - name: gitops.asax.ir
+      ports:
+        - 443
+    - name: repo.asax.ir
+      ports:
+        - 80
+        - 443
+    - name: azure.asax.ir
+      ports:
+        - 80
+        - 443
+    - name: 172.28.57.10 # Splunk management port
+      ports:
+        - 8089
+    - name: cliq.zoho.com
+      ports:
+        - 443
+    - name: 172.20.29.92 # bs-kube-lbvip
+      ports:
+        - 6443
+    - name: 172.20.29.93 # bs-kube-lbvip
+      ports:
+        - 6443
+    - name: 172.20.29.94 # bs-kube-lbvip
+      ports:
+        - 6443
+    - name: 172.20.36.5 # bs-kube-hapvip
+      ports:
+        - 8443
+    - name: 172.20.36.6 # bs-kube-hapvip
+      ports:
+        - 8443
+    - name: 172.20.36.7 # bs-kube-hapvip
+      ports:
+        - 8443
